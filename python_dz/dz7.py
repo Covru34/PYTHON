@@ -37,3 +37,15 @@ print(" ".join(result))
 
 # Завдання 4
 
+text = input('Введіть текст: ')
+a = input("Введіть преший символ: ")
+b = input("Введіть другий символ: ")
+
+start = text.find(a)
+end = text.find(b, start + 1)
+
+if start != -1 and end != -1:
+    result = text[:start] + text[end+1:]
+    print(result)
+else:
+    print("Символи не знайдені")

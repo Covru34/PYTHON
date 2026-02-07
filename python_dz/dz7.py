@@ -1,6 +1,6 @@
 # Завданя 1
 
-text = input("Введіть тест: ")
+text = input("Введіть текст: ")
 
 count = 0
 for ch in text:

@@ -1,30 +1,30 @@
-# Завадання 1
-# Створив функцію def
-# def count_greater_than_previous(list):
-#     count = 0
+#Завадання 1
+#Створив функцію def
+def count_greater_than_previous(list):
+    count = 0
 
-#     for i in range(1, len(list)):
-#         if list[i] > list[i-1]:
-#             count += 1
-#     return count
+    for i in range(1, len(list)):
+        if list[i] > list[i-1]:
+            count += 1
+    return count
 
-# # Викликав функцію def
-# spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
+# Викликав функцію def
+spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
 
-# result = count_greater_than_previous(spisok)
-# print("Кількість елементів: ", result)
+result = count_greater_than_previous(spisok)
+print("Кількість елементів: ", result)
 
-# # Завдання 2
+# Завдання 2
 
-# spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
+spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
 
-# print("Елементи які зустрічаються лише 1 раз: ")
+print("Елементи які зустрічаються лише 1 раз: ")
 
-# for i in spisok:
-#     if spisok.count(i) == 1:
-#         print(i, end=" ")
+for i in spisok:
+    if spisok.count(i) == 1:
+        print(i, end=" ")
 
-# # Завдання 3 
+# Завдання 3 
 
 spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
 
@@ -44,3 +44,12 @@ print("Довжина:", len(longest))
 print("Послідовність:", *longest)
 
 # Завдання 4
+
+spisok = list(map(int, input("Введіть список цілих чисел: ").split()))
+
+k = int(input("На скільки позицій зробити циклічний зсув вправо? "))
+
+k = k % len(spisok) 
+shifted_spisok = spisok[-k:] + spisok[:-k]
+
+print("Список після циклічного зсуву вправо:", shifted_spisok)
